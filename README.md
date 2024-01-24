@@ -8,7 +8,7 @@ Notification of new kofi subscriber via discord, written in Go
 - `make` and test using sample Kofi data 
 ```
 curl -X POST 127.0.0.1:8080/kofi -d '{
-  "verification_token": "ad5a7655-c913-4725-9ee3-f5d0410ea5af",
+  "verification_token": "YOUR_VERIFICATION_TOKEN",
   "message_id": "4afbccad-e983-4034-8759-d4c525ee8c48",
   "timestamp": "2024-01-24T19:19:42Z",
   "type": "Subscription",
