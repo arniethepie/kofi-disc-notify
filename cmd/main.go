@@ -36,7 +36,7 @@ func handlePostRequest(w http.ResponseWriter, r *http.Request) {
 	}
 
 	if data.Token != authToken {
-		http.Error(w, "Error, incorrect token", http.StatusBadRequest)
+		http.Error(w, "Error, incorrect token", http.StatusUnauthorized)
 		return
 	}
 
