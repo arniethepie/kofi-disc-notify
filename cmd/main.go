@@ -14,11 +14,11 @@ const token = ""
 const channelID = ""
 
 var data struct {
-    Token         string `json:"verification_token"`
-    First_payment bool   `json:"is_first_subscription_payment"`
-    Name          string `json:"from_name"`
-    Tier          string `json:"tier_name"`
-    Amount        string `json:"amount"`
+	Token         string `json:"verification_token"`
+	First_payment bool   `json:"is_first_subscription_payment"`
+	Name          string `json:"from_name"`
+	Tier          string `json:"tier_name"`
+	Amount        string `json:"amount"`
 }
 
 func handlePostRequest(w http.ResponseWriter, r *http.Request) {
@@ -45,19 +45,16 @@ func handlePostRequest(w http.ResponseWriter, r *http.Request) {
 	w.WriteHeader(http.StatusOK)
 	// w.Write([]byte("JSON received successfully"))
 
-    if data.First_payment != true {
-        fmt.Println("not first payment, don't send msg")
-        return
-    }
+	if data.First_payment != true {
+		fmt.Println("not first payment, don't send msg")
+		return
+	}
 
 	dg, err := discordgo.New("Bot " + token)
 	if err != nil {
 		fmt.Println("error creating Discord session,", err)
 		return
 	}
-    
-
-
 
 	fields := []*discordgo.MessageEmbedField{
 		{
