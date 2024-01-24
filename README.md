@@ -1,3 +1,3 @@
-Notification of kofi subscriber via discord, written in Go
+Notification of new kofi subscriber via discord, written in Go
 
-This is not complete, just committing something for now
+**This is not complete, just committing something for now**
