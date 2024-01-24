@@ -10,7 +10,7 @@ import (
 )
 
 const authToken = ""
-const token = ""
+const botToken = ""
 const channelID = ""
 
 var data struct {
@@ -50,7 +50,7 @@ func handlePostRequest(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	dg, err := discordgo.New("Bot " + token)
+	dg, err := discordgo.New("Bot " + botToken)
 	if err != nil {
 		fmt.Println("error creating Discord session,", err)
 		return

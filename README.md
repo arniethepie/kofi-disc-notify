@@ -4,6 +4,7 @@ Notification of new kofi subscriber via discord, written in Go
 **This is not complete, just committing something for now**
 
 ## Usage
+- Populate the `authToken` (provided by your kofi https://ko-fi.com/manage/webhooks), botToken (discord bot token) and channelID (discord channel ID)
 - `make` and test using sample Kofi data 
 ```
 curl -X POST 127.0.0.1:8080/kofi -d '{
